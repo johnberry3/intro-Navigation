@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500, 700;
+    font-family: 'Epilogue', sans-serif;
+}
+.nav-ul{
+    margin: 0;
+   
+    display: flex;
+    margin-right: 10px;
+    padding: 0;
+    align-items: center;
+}
+.nav-btns button:nth-child(1){
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.nav-btns button:nth-child(2){
+    outline: none;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: transparent;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    
+}
+.bar{
+    display: none;
+}
+.overlay{
+display: none;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-btn{
+    margin-right: 20px;
+}
+.dropdown-content{
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    width: 150px;
+    z-index: 2;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown-content a{
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dropdown-content img{
+    margin-right: 4px;
+}
+.dropdown-content a:hover{
+    background-color: #ddd;
+    border-radius: 4px;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+/*main desktop */
+h1{
+    font-size: 70px;
+    width: 500px;
+}
+.hero{
+    top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(2,450px);
+    grid-gap: 80px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s linear;
+}
+.img-container img{
+    width: 100%;
+}
+.logos{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hero button{
+    margin-top: 40px;
+    outline:  none;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 9px;
+    background-color: rgb(19, 18, 18);
+    color: white;
+    font-size: 15px;
+    transition: all 1s;
+}
+.hero button:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    color: grey;
+    cursor: pointer;
+    transition: all 1s;
+}
+@media(max-width:1200px){
+    .hero{
+        max-width: 960px;
+        grid-template-columns:repeat(2, 400px) ;
+    }
+}
+@media(max-width:900px){
+     .nav-btns{
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+      
+     }
+     .nav-ul{
+        display: none;
+     }
+     .bar{
+        display: block;
+     }
+     .hero{
+        margin: 50px;
+        max-width: 960px;
+        grid-template-columns: repeat(1, max(200px, 300px));
+     }
+     .img-container{
+        grid-row: 1;
+     }
+     .img-container img{
+        content: url(images/image-hero-mobile.png);
+     }
+     .hero-text{
+        text-align: center;
+     }
+     .hero button{
+        margin: 0;
+     }
+     h1{
+        font-size: 30px;
+        margin: 0;
+        width:  100%;
+        text-align: center;
+     }
+     br{
+        display: none;
+     }
+     a{
+        margin: 0;
+     }
+     .lock{
+        overflow: hidden;
+     }
+     .overlay{
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        
+     }
+     .mobile-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        background-color: white;
+        right: 0;
+        top: 0;
+        display: none;
+        padding: 20px;
+        width:  180px;
+        height: 100%;
+     }
+     .mobile-nav img{
+        text-align: right;
+     }
+     .overlay{
+       display: none;
+     }
+     .show{
+        display: flex;
+        
+     }
+     .logos{
+        width: 100%;
+     }
+     .logos img{
+        width: 5rem;
+     }
+     .mobile-nav-con{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: end;
+     }
+     .mobile-nav-con > * {
+        padding: 10px;
+     }
+}
