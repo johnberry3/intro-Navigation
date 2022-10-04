@@ -215,8 +215,34 @@ h1{
         flex-direction: column;
         width: 100%;
         justify-content: end;
+        
      }
      .mobile-nav-con > * {
         padding: 10px;
      }
+     .mobile-btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+     }
+     .mobile-btns > *{
+       padding: 10px;
+     }
+     .mobile-btns button:nth-child(1){
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .mobile-btns button:nth-child(2){
+        outline: none;
+        border: none;
+        padding: 10px 55px;
+        border-radius: 10px;
+        border: 1px solid black;
+        background-color: transparent;
+        cursor: pointer;
+    }
 }
